@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard | Govt GTTI Official</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-university"></i>
+                    <span>GTTI RYK</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="index.html"><i class="fas fa-home"></i> <span>Dashboard</span></a>
+                    </li>
+                    <li>
+                        <a href="progress.html"><i class="fas fa-book-reader"></i> <span>My Progress</span></a>
+                    </li>
+                    <li>
+                        <a href="attendance.html"><i class="fas fa-calendar-alt"></i> <span>Attendance</span></a>
+                    </li>
+                    <li>
+                        <a href="fees.html"><i class="fas fa-wallet"></i> <span>Fee Status</span></a>
+                    </li>
+                    <li>
+                        <a href="results.html"><i class="fas fa-graduation-cap"></i> <span>Exam Results</span></a>
+                    </li>
+                    <li>
+                        <a href="notices.html"><i class="fas fa-bell"></i> <span>Notices</span></a>
+                    </li>
+                </ul>
+
+                <ul class="sidebar-bottom" style="margin-top: auto;">
+                    <li>
+                        <a href="profile.html"><i class="fas fa-user-cog"></i> <span>Profile Settings</span></a>
+                    </li>
+                    <li>
+                        <a href="login.html" style="color: #ef4444;"><i class="fas fa-sign-out-alt"></i> <span>Sign
+                                Out</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Workspace -->
+        <main class="main-content">
+            <header class="top-header">
+                <div class="header-left">
+                    <div style="display: flex; align-items: center; gap: 20px;">
+                        <button class="toggle-btn" id="toggle-sidebar">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <div>
+                            <h1 id="greeting">Welcome, Ayesha Khan!</h1>
+                            <p>Track your academic journey and performance here.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search courses or results...">
+                    </div>
+                    <div class="header-actions">
+                        <div class="notification-bell">
+                            <i class="fas fa-bell"></i>
+                            <span
+                                style="position: absolute; top: 0; right: 0; width: 10px; height: 10px; background: #ef4444; border-radius: 50%; border: 2px solid white;"></span>
+                        </div>
+                        <div class="user-profile">
+                            <img src="https://ui-avatars.com/api/?name=Ayesha+Khan&background=0A3D62&color=fff"
+                                alt="User">
+                            <span style="font-weight: 700; color: white;">Ayesha</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="fade-in">
+                <!-- Statistics Overview -->
+                <section class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-upper">
+                            <div class="stat-icon attendance">
+                                <i class="fas fa-percentage"></i>
+                            </div>
+                            <span style="color: #10b981; font-weight: 700; font-size: 0.9rem;">+2.5%</span>
+                        </div>
+                        <div class="stat-details">
+                            <h3>92%</h3>
+                            <p>Monthly Attendance</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-upper">
+                            <div class="stat-icon courses">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+                            <span style="color: #3b82f6; font-weight: 700; font-size: 0.9rem;">6 Total</span>
+                        </div>
+                        <div class="stat-details">
+                            <h3>4</h3>
+                            <p>Active Courses</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-upper">
+                            <div class="stat-icon gpa">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span style="color: #f59e0b; font-weight: 700; font-size: 0.9rem;">Top 5%</span>
+                        </div>
+                        <div class="stat-details">
+                            <h3>3.92</h3>
+                            <p>Current CGPA</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-upper">
+                            <div class="stat-icon fees">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <span style="color: #ef4444; font-weight: 700; font-size: 0.9rem;">Verified</span>
+                        </div>
+                        <div class="stat-details">
+                            <h3>Paid</h3>
+                            <p>Fee Clearance</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Detailed Content -->
+                <div class="content-grid">
+                    <div class="grid-card">
+                        <div class="card-header">
+                            <h2>My Enrolled Courses</h2>
+                        </div>
+                        <div class="course-list">
+                            <div class="course-item">
+                                <div class="course-meta">
+                                    <h4>Advanced Web Development</h4>
+                                    <span>Prof. Muhammad Salman • Semester 4</span>
+                                </div>
+                                <div class="course-progress">
+                                    <div class="progress-bar-container">
+                                        <div class="progress-fill" style="width: 85%;"></div>
+                                    </div>
+                                    <span>85%</span>
+                                </div>
+                            </div>
+                            <div class="course-item">
+                                <div class="course-meta">
+                                    <h4>UI/UX Digital Design</h4>
+                                    <span>Dr. Ayesha Malik • Semester 4</span>
+                                </div>
+                                <div class="course-progress">
+                                    <div class="progress-bar-container">
+                                        <div class="progress-fill" style="width: 65%;"></div>
+                                    </div>
+                                    <span>65%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-card">
+                        <div class="card-header">
+                            <h2>Recent Notices</h2>
+                        </div>
+                        <div class="notices-list" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                            <div class="notice-item"
+                                style="padding: 1.5rem; background: var(--card-bg); border-radius: var(--border-radius-md); border-left: 5px solid #f59e0b;">
+                                <h4 style="font-weight: 800; margin-bottom: 5px; color: var(--text-main);">Mid-Term
+                                    Schedule</h4>
+                                <p style="color: var(--text-muted); font-size: 0.9rem;">The mid-term examinations for
+                                    the Spring
+                                    session are starting from Jan 15, 2026.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
