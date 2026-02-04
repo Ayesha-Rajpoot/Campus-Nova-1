@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard - GTTI</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo-section">
+                <i class="fa-solid fa-graduation-cap logo-icon"></i>
+                <h2>GTTI Panel</h2>
+            </div>
+
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="nav-item active" data-target="dashboard">
+                        <a href="#"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+                    </li>
+                    <li class="nav-item" data-target="my-classes">
+                        <a href="#"><i class="fa-solid fa-chalkboard-user"></i> My Classes</a>
+                    </li>
+                    <li class="nav-item" data-target="students">
+                        <a href="#"><i class="fa-solid fa-users"></i> Students</a>
+                    </li>
+                    <li class="nav-item" data-target="attendance">
+                        <a href="#"><i class="fa-solid fa-calendar-check"></i> Attendance</a>
+                    </li>
+                    <li class="nav-item" data-target="results">
+                        <a href="#"><i class="fa-solid fa-clipboard-list"></i> Results</a>
+                    </li>
+                    <li class="nav-item logout-item">
+                        <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="user-profile-mini">
+                <div class="avatar">T</div>
+                <div class="info">
+                    <span class="name">Mr. Ahmad Raza</span>
+                    <span class="role">Snr. Instructor</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="top-header">
+                <div class="header-check">
+                    <h1 id="page-title">Dashboard Overview</h1>
+                    <span class="date-display" id="currentDate">Mon, 07 Jan 2026</span>
+                </div>
+                <div class="header-actions">
+                    <div class="search-bar">
+                        <i class="fa-solid fa-search"></i>
+                        <input type="text" id="global-search" placeholder="Search students...">
+                    </div>
+                    <div class="notifications">
+                        <i class="fa-solid fa-bell"></i>
+                        <span class="badge">3</span>
+                        <!-- Notification Dropdown -->
+                        <div class="notification-dropdown">
+                            <div class="dropdown-header">
+                                <h3>Notifications</h3>
+                                <button class="mark-read">Mark all as read</button>
+                            </div>
+                            <div class="dropdown-body">
+                                <div class="notif-item unread">
+                                    <div class="notif-icon bg-blue"><i class="fa-solid fa-info"></i></div>
+                                    <div class="notif-content">
+                                        <p><strong>System Update</strong> New features added to the dashboard.</p>
+                                        <span>2 mins ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-item unread">
+                                    <div class="notif-icon bg-green"><i class="fa-solid fa-check"></i></div>
+                                    <div class="notif-content">
+                                        <p><strong>Attendance Saved</strong> Class Electrician attendance submitted.</p>
+                                        <span>1 hour ago</span>
+                                    </div>
+                                </div>
+                                <div class="notif-item">
+                                    <div class="notif-icon bg-green"><i class="fa-solid fa-triangle-exclamation"></i>
+                                    </div>
+                                    <div class="notif-content">
+                                        <p><strong>Pending Grades</strong> HVAC results are pending approval.</p>
+                                        <span>5 hours ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown-footer">
+                                <a href="#">View All Notifications</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dynamic Views -->
+            <div id="content-area" class="content-area">
+                <!-- Dashboard Home View -->
+                <div id="dashboard-view" class="view-section active">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="icon-box blue"><i class="fa-solid fa-users"></i></div>
+                            <div class="stat-info">
+                                <h3>Total Students</h3>
+                                <p class="number">142</p>
+                                <span class="trend up"><i class="fa-solid fa-arrow-up"></i> 12 New</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="icon-box green"><i class="fa-solid fa-user-clock"></i></div>
+                            <div class="stat-info">
+                                <h3>Avg. Attendance</h3>
+                                <p class="number">88%</p>
+                                <span class="trend text-muted">Last 30 Days</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="icon-box green"><i class="fa-solid fa-star"></i></div>
+                            <div class="stat-info">
+                                <h3>Top Performance</h3>
+                                <p class="number">HVAC</p>
+                                <span class="trend">Class of 2025</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="icon-box red"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                            <div class="stat-info">
+                                <h3>Pending Grades</h3>
+                                <p class="number">24</p>
+                                <span class="trend down">Needs Action</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recent-section">
+                        <div class="section-header">
+                            <h2>Recent Activity</h2>
+                            <button class="btn-sm">View All</button>
+                        </div>
+                        <div class="activity-list">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Students View (Placeholder) -->
+                <div id="students-view" class="view-section" style="display:none;">
+                    <div class="section-header" style="margin-top: 1rem;">
+                        <h2>Student Management</h2>
+                        <div class="header-tools">
+                            <span class="total-count">Total: 142 Students</span>
+                        </div>
+                    </div>
+                    <div class="table-container">
+                        <div class="table-action-bar">
+                            <div class="filters">
+                                <select class="gtti-select" id="student-trade-filter">
+                                    <option>Select Trade</option>
+                                    <option>Electrician</option>
+                                    <option>HVAC</option>
+                                    <option>Computer App</option>
+                                </select>
+                            </div>
+                            <button class="btn-primary" id="add-student-btn"><i class="fa-solid fa-plus"></i> Add
+                                Student</button>
+                        </div>
+                        <table class="gtti-table" id="students-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Trade</th>
+                                    <th>Session</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- JS Populated -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- My Classes View -->
+                <div id="my-classes-view" class="view-section" style="display:none;">
+                    <div class="section-header">
+                        <h2>Assigned Classes</h2>
+                        <div style="display: flex; gap: 10px;">
+                            <button class="btn-sm" id="toggle-archived-btn">View Archived</button>
+                            <button class="btn-primary" id="request-class-btn"><i class="fa-solid fa-plus"></i> Request
+                                New Class</button>
+                        </div>
+                    </div>
+
+                    <div class="classes-grid" id="my-classes-container">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Attendance View -->
+            <div id="attendance-view" class="view-section" style="display:none;">
+                <div class="table-container">
+                    <div class="table-action-bar">
+                        <div class="filters" style="display: flex; gap: 15px; align-items: center;">
+                            <select class="gtti-select" id="attendance-class-select">
+                                <option value="" disabled selected>Select Class</option>
+                                <option value="Electrician">Electrician (Session 2024-25)</option>
+                                <option value="HVAC">HVAC (Session 2024-25)</option>
+                                <option value="Comp. App">Computer App (Short Course)</option>
+                            </select>
+                            <input type="date" class="gtti-select" id="attendance-date">
+                        </div>
+                        <div class="actions">
+                            <button class="btn-sm" id="mark-all-present-btn" style="margin-right: 10px;">Mark All
+                                Present</button>
+                            <button class="btn-primary" id="save-attendance-btn"><i class="fa-solid fa-save"></i> Save
+                                Attendance</button>
+                        </div>
+                    </div>
+
+                    <div class="attendance-sheet-wrapper">
+                        <table class="gtti-table" id="attendance-table">
+                            <thead>
+                                <tr>
+                                    <th>Roll No</th>
+                                    <th>Student Name</th>
+                                    <th style="text-align: center;">Status</th>
+                                    <th>Remarks</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Populated by JS -->
+                            </tbody>
+                        </table>
+                        <div id="attendance-placeholder"
+                            style="text-align: center; padding: 3rem; color: var(--text-muted);">
+                            <i class="fa-solid fa-chalkboard-user"
+                                style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.5;"></i>
+                            <p>Select a class to mark attendance</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results View -->
+            <div id="results-view" class="view-section" style="display:none;">
+                <div class="table-container">
+                    <div class="table-action-bar">
+                        <div class="filters" style="display: flex; gap: 15px; align-items: center;">
+                            <select class="gtti-select" id="result-class-select">
+                                <option value="" disabled selected>Select Class</option>
+                                <option value="Electrician">Electrician</option>
+                                <option value="HVAC">HVAC</option>
+                                <option value="Comp. App">Comp. App</option>
+                            </select>
+                            <select class="gtti-select" id="exam-type-select">
+                                <option>Mid Term Exam</option>
+                                <option>Final Exam</option>
+                                <option>Practical Assessment</option>
+                            </select>
+                        </div>
+                        <div class="actions">
+                            <button class="btn-primary" id="publish-result-btn"><i class="fa-solid fa-upload"></i>
+                                Publish Results</button>
+                        </div>
+                    </div>
+
+                    <div class="results-sheet-wrapper">
+                        <table class="gtti-table" id="results-table">
+                            <thead>
+                                <tr>
+                                    <th>Roll No</th>
+                                    <th>Student Name</th>
+                                    <th>Total Marks</th>
+                                    <th>Obtained Marks</th>
+                                    <th>Grade</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Populated by JS -->
+                            </tbody>
+                        </table>
+                        <div id="results-placeholder"
+                            style="text-align: center; padding: 3rem; color: var(--text-muted);">
+                            <i class="fa-solid fa-file-contract"
+                                style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.5;"></i>
+                            <p>Select Class and Exam to enter marks</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Notifications Full View -->
+            <div id="notifications-view" class="view-section" style="display:none;">
+                <div class="section-header">
+                    <h2>All Notifications & Activity</h2>
+                    <button class="btn-sm" id="back-to-dash"><i class="fa-solid fa-arrow-left"></i> Back to
+                        Dashboard</button>
+                </div>
+                <div class="table-container">
+                    <div class="filters" style="margin-bottom: 2rem;">
+                        <button class="btn-sm category-filter active" data-filter="all">All</button>
+                        <button class="btn-sm category-filter" data-filter="unread">Unread</button>
+                        <button class="btn-sm category-filter" data-filter="alert">Alerts</button>
+                    </div>
+                    <div class="all-notifications-list">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Generated content for other views will be handled by JS -->
+    </div>
+    </main>
+    </div>
+
+    <!-- Modals or Sticky elements can go here -->
+
+    <!-- Add Student Modal -->
+    <div id="add-student-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add New Student</h2>
+                <i class="fa-solid fa-xmark close-modal"></i>
+            </div>
+            <form id="add-student-form">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="e.g. Ahmad Ali" required>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <label>Student ID</label>
+                        <input type="text" placeholder="GT-2024-XXX" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Session</label>
+                        <input type="text" value="2024-25" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Trade / Course</label>
+                    <select class="gtti-select" style="width: 100%;">
+                        <option>Electrician</option>
+                        <option>HVAC</option>
+                        <option>Computer Applications</option>
+                        <option>Welding</option>
+                        <option>Dress Making</option>
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-sm close-modal-btn"
+                        style="border: 1px solid #ccc; color: #666;">Cancel</button>
+                    <button type="submit" class="btn-primary">Add Student</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Request New Class Modal -->
+    <div id="request-class-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Request New Class Assignment</h2>
+                <i class="fa-solid fa-xmark close-modal"></i>
+            </div>
+            <form id="request-class-form">
+                <div class="form-group">
+                    <label>Preferred Subject / Trade</label>
+                    <select class="gtti-select" style="width: 100%;" required>
+                        <option value="" disabled selected>Select Trade</option>
+                        <option>Electrician</option>
+                        <option>HVAC</option>
+                        <option>Computer Applications</option>
+                        <option>Welding</option>
+                        <option>Dress Making</option>
+                        <option>Auto Cad</option>
+                        <option>Plumbing</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <label>Session</label>
+                        <input type="text" value="2024-25" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Preferred Time</label>
+                        <select class="gtti-select" style="width: 100%;">
+                            <option>Morning (08:00 - 12:00)</option>
+                            <option>Afternoon (12:30 - 04:30)</option>
+                            <option>Evening (02:00 - 05:00)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Reason / Additional Notes</label>
+                    <textarea placeholder="Briefly describe why you are requesting this class..." rows="3"
+                        style="width: 100%; padding: 0.8rem; border: 1px solid var(--border-color); border-radius: 8px; font-family: inherit;"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-sm close-modal-btn"
+                        style="border: 1px solid #ccc; color: #666;">Cancel</button>
+                    <button type="submit" class="btn-primary">Submit Request</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    </div>
+
+    <!-- View Profile Modal -->
+    <div id="view-profile-modal" class="modal-overlay">
+        <div class="modal-content" style="max-width: 500px;">
+            <div class="modal-header">
+                <h2>Student Profile</h2>
+                <i class="fa-solid fa-xmark close-modal"></i>
+            </div>
+            <div class="profile-body" style="text-align: center; padding: 1rem;">
+                <div class="profile-avatar"
+                    style="width: 100px; height: 100px; background: var(--bg-light); border-radius: 50%; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: var(--primary);">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <h3 id="profile-name" style="margin-bottom: 0.5rem; color: var(--text-dark);">Student Name</h3>
+                <span id="profile-id"
+                    style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem; display: block;">GT-2024-XXX</span>
+
+                <div class="profile-details"
+                    style="text-align: left; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; background: var(--bg-light); padding: 1.5rem; border-radius: 8px;">
+                    <div>
+                        <small style="color: var(--text-muted); display: block; margin-bottom: 4px;">Trade</small>
+                        <strong id="profile-trade" style="color: var(--text-dark);">Electrician</strong>
+                    </div>
+                    <div>
+                        <small style="color: var(--text-muted); display: block; margin-bottom: 4px;">Session</small>
+                        <strong id="profile-session" style="color: var(--text-dark);">2024-25</strong>
+                    </div>
+                    <div>
+                        <small style="color: var(--text-muted); display: block; margin-bottom: 4px;">Status</small>
+                        <span id="profile-status" class="status-badge active">Active</span>
+                    </div>
+                    <div>
+                        <small style="color: var(--text-muted); display: block; margin-bottom: 4px;">Attendance</small>
+                        <strong id="profile-attendance" style="color: var(--text-dark);">85%</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-sm close-modal-btn"
+                    style="border: 1px solid #ccc; color: #666;">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Context Menu for Three Dots -->
+    <div id="class-context-menu" class="context-menu">
+        <ul>
+            <li data-action="view-details"><i class="fa-solid fa-eye"></i> View Details</li>
+            <li data-action="edit-class"><i class="fa-solid fa-pen"></i> Edit Class</li>
+            <li data-action="manage-students"><i class="fa-solid fa-people-group"></i> Manage Students</li>
+            <li data-action="archive" class="archive-option"
+                style="border-top: 1px solid var(--border-color); color: var(--danger);"><i class="fa-solid fa-trash"
+                    style="color: var(--danger);"></i> Archive</li>
+            <li data-action="unarchive" class="unarchive-option"
+                style="border-top: 1px solid var(--border-color); color: var(--success); display: none;"><i
+                    class="fa-solid fa-box-open" style="color: var(--success);"></i> Unarchive</li>
+        </ul>
+    </div>
+
+    <!-- Context Menu for Students -->
+    <div id="student-context-menu" class="context-menu">
+        <ul>
+            <li data-action="view-profile"><i class="fa-solid fa-user"></i> View Profile</li>
+            <li data-action="edit-student"><i class="fa-solid fa-pen"></i> Edit Student</li>
+            <li data-action="toggle-status" style="border-top: 1px solid var(--border-color);"><i
+                    class="fa-solid fa-toggle-off"></i> Mark Inactive</li>
+            <li data-action="delete-student" style="color: var(--danger);"><i class="fa-solid fa-trash"
+                    style="color: var(--danger);"></i> Delete</li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
