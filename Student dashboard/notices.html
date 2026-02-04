@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notices | Govt GTTI Official</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-university"></i>
+                    <span>GTTI RYK</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="index.html"><i class="fas fa-home"></i> <span>Dashboard</span></a>
+                    </li>
+                    <li>
+                        <a href="progress.html"><i class="fas fa-book-reader"></i> <span>My Progress</span></a>
+                    </li>
+                    <li>
+                        <a href="attendance.html"><i class="fas fa-calendar-alt"></i> <span>Attendance</span></a>
+                    </li>
+                    <li>
+                        <a href="fees.html"><i class="fas fa-wallet"></i> <span>Fee Status</span></a>
+                    </li>
+                    <li>
+                        <a href="results.html"><i class="fas fa-graduation-cap"></i> <span>Exam Results</span></a>
+                    </li>
+                    <li class="active">
+                        <a href="notices.html"><i class="fas fa-bell"></i> <span>Notices</span></a>
+                    </li>
+                </ul>
+
+                <ul class="sidebar-bottom" style="margin-top: auto;">
+                    <li>
+                        <a href="profile.html"><i class="fas fa-user-cog"></i> <span>Profile Settings</span></a>
+                    </li>
+                    <li>
+                        <a href="login.html" style="color: #ef4444;"><i class="fas fa-sign-out-alt"></i> <span>Sign
+                                Out</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Workspace -->
+        <main class="main-content">
+            <header class="top-header">
+                <div class="header-left">
+                    <div style="display: flex; align-items: center; gap: 20px;">
+                        <button class="toggle-btn" id="toggle-sidebar">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <div>
+                            <h1>Notice Board</h1>
+                            <p>Stay updated with the latest institutional announcements.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="header-actions">
+                        <div class="user-profile">
+                            <img src="https://ui-avatars.com/api/?name=Ayesha+Khan&background=0A3D62&color=fff"
+                                alt="User">
+                            <span style="font-weight: 700; color: white;">Ayesha</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="fade-in">
+                <div style="display: flex; flex-direction: column; gap: 2rem;">
+                    <div class="grid-card" style="border-left: 8px solid #f59e0b; background: var(--card-bg);">
+                        <div class="card-header">
+                            <h2 style="color: var(--text-main);"><i class="fas fa-exclamation-triangle"></i> Examination
+                                Form
+                                Submission</h2>
+                            <span>24 Dec 2025</span>
+                        </div>
+                        <p style="font-size: 1.1rem; line-height: 1.6; color: var(--text-muted);">
+                            Deadline for submitting Examination Forms for the Spring 2026 session is **January 5th,
+                            2026**.
+                        </p>
+                    </div>
+
+                    <div class="grid-card" style="border-left: 8px solid #3b82f6; background: var(--card-bg);">
+                        <div class="card-header">
+                            <h2 style="color: var(--text-main);"><i class="fas fa-info-circle"></i> Workshop on AI</h2>
+                            <span>28 Dec 2025</span>
+                        </div>
+                        <p style="font-size: 1.1rem; line-height: 1.6; color: var(--text-muted);">
+                            Specialized workshop on "Artificial Intelligence in Modern Industry" this coming Friday.
+                        </p>
+                        <button class="btn" id="register-ai-workshop"
+                            style="margin-top: 1.5rem; background: #3b82f6; color: white; border: none; padding: 10px 20px; border-radius: 8px; font-weight: 700; cursor: pointer;">Register
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
