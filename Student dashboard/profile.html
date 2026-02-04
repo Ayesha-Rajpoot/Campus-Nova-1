@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Settings | Govt GTTI Official</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-university"></i>
+                    <span>GTTI RYK</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="index.html"><i class="fas fa-home"></i> <span>Dashboard</span></a>
+                    </li>
+                    <li>
+                        <a href="progress.html"><i class="fas fa-book-reader"></i> <span>My Progress</span></a>
+                    </li>
+                    <li>
+                        <a href="attendance.html"><i class="fas fa-calendar-alt"></i> <span>Attendance</span></a>
+                    </li>
+                    <li>
+                        <a href="fees.html"><i class="fas fa-wallet"></i> <span>Fee Status</span></a>
+                    </li>
+                    <li>
+                        <a href="results.html"><i class="fas fa-graduation-cap"></i> <span>Exam Results</span></a>
+                    </li>
+                    <li>
+                        <a href="notices.html"><i class="fas fa-bell"></i> <span>Notices</span></a>
+                    </li>
+                </ul>
+
+                <ul class="sidebar-bottom" style="margin-top: auto;">
+                    <li class="active">
+                        <a href="profile.html"><i class="fas fa-user-cog"></i> <span>Profile Settings</span></a>
+                    </li>
+                    <li>
+                        <a href="login.html" style="color: #ef4444;"><i class="fas fa-sign-out-alt"></i> <span>Sign
+                                Out</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Workspace -->
+        <main class="main-content">
+            <header class="top-header">
+                <div class="header-left">
+                    <div style="display: flex; align-items: center; gap: 20px;">
+                        <button class="toggle-btn" id="toggle-sidebar">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <div>
+                            <h1>Profile Settings</h1>
+                            <p>Update your personal information and account security.</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="fade-in">
+                <div class="grid-card">
+                    <div style="display: flex; align-items: center; gap: 3rem; margin-bottom: 3rem;">
+                        <div style="position: relative;">
+                            <img id="profile-img-preview"
+                                src="https://ui-avatars.com/api/?name=Ayesha+Khan&background=0A3D62&color=fff&size=150"
+                                alt="User big"
+                                style="width: 150px; height: 150px; border-radius: 50%; border: 5px solid #f1f5f9;">
+                            <button id="upload-profile-pic-btn"
+                                style="position: absolute; bottom: 5px; right: 5px; background: var(--secondary-gradient); color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer;"><i
+                                    class="fas fa-camera"></i></button>
+                            <input type="file" id="profile-pic-input" style="display: none;" accept="image/*">
+                        </div>
+                        <div>
+                            <h2 style="font-size: 2rem;">Ayesha Khan</h2>
+                            <p style="color: var(--text-muted); font-weight: 600;">GTTI-RYK-2023-4456</p>
+                        </div>
+                    </div>
+
+                    <form style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                        <div style="display: flex; flex-direction: column; gap: 10px;">
+                            <label style="font-weight: 800; color: var(--text-main);">Full Name</label>
+                            <input type="text" value="Ayesha Khan"
+                                style="padding: 15px; border-radius: 12px; border: 1px solid var(--border-color); background: #0a0a0a; color: white; font-family: inherit;">
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 10px;">
+                            <label style="font-weight: 800; color: var(--text-main);">Email Address</label>
+                            <input type="email" value="ayesha.student@gtti.edu.pk"
+                                style="padding: 15px; border-radius: 12px; border: 1px solid var(--border-color); background: #0a0a0a; color: white; font-family: inherit;">
+                        </div>
+                        <div style="grid-column: span 2; display: flex; justify-content: flex-end; margin-top: 1rem;">
+                            <button type="submit" class="btn"
+                                style="background: var(--primary-gradient); color: white; border: none; padding: 15px 40px; border-radius: 50px; font-weight: 800; cursor: pointer;">Save
+                                Changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
