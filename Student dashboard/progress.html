@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Progress | Govt GTTI Official</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-university"></i>
+                    <span>GTTI RYK</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="index.html"><i class="fas fa-home"></i> <span>Dashboard</span></a>
+                    </li>
+                    <li class="active">
+                        <a href="progress.html"><i class="fas fa-book-reader"></i> <span>My Progress</span></a>
+                    </li>
+                    <li>
+                        <a href="attendance.html"><i class="fas fa-calendar-alt"></i> <span>Attendance</span></a>
+                    </li>
+                    <li>
+                        <a href="fees.html"><i class="fas fa-wallet"></i> <span>Fee Status</span></a>
+                    </li>
+                    <li>
+                        <a href="results.html"><i class="fas fa-graduation-cap"></i> <span>Exam Results</span></a>
+                    </li>
+                    <li>
+                        <a href="notices.html"><i class="fas fa-bell"></i> <span>Notices</span></a>
+                    </li>
+                </ul>
+
+                <ul class="sidebar-bottom" style="margin-top: auto;">
+                    <li>
+                        <a href="profile.html"><i class="fas fa-user-cog"></i> <span>Profile Settings</span></a>
+                    </li>
+                    <li>
+                        <a href="login.html" style="color: #ef4444;"><i class="fas fa-sign-out-alt"></i> <span>Sign
+                                Out</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Workspace -->
+        <main class="main-content">
+            <header class="top-header">
+                <div class="header-left">
+                    <div style="display: flex; align-items: center; gap: 20px;">
+                        <button class="toggle-btn" id="toggle-sidebar">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <div>
+                            <h1>Detailed Progress</h1>
+                            <p>Track your skill development and course completion status.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="header-actions">
+                        <div class="notification-bell">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <div class="user-profile">
+                            <img src="https://ui-avatars.com/api/?name=Ayesha+Khan&background=0A3D62&color=fff"
+                                alt="User">
+                            <span style="font-weight: 700; color: white;">Ayesha</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="fade-in">
+                <div class="content-grid" style="grid-template-columns: 1fr;">
+                    <div class="grid-card">
+                        <div class="card-header">
+                            <h2>Course Completion Status</h2>
+                        </div>
+                        <div class="course-list">
+                            <!-- Advanced Web Tech -->
+                            <div class="course-item"
+                                style="flex-direction: column; align-items: flex-start; gap: 1rem;">
+                                <div
+                                    style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
+                                    <div class="course-meta">
+                                        <h4>Advanced Web Development</h4>
+                                        <span>8 Modules Completed out of 10</span>
+                                    </div>
+                                    <span style="font-weight: 800; color: #0A3D62;">85%</span>
+                                </div>
+                                <div class="progress-bar-container" style="width: 100%;">
+                                    <div class="progress-fill" style="width: 85%;"></div>
+                                </div>
+                                <div
+                                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; width: 100%; margin-top: 1rem;">
+                                    <div
+                                        style="padding: 1rem; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0; text-align: center;">
+                                        <h5 style="color: #64748b;">Assignments</h5>
+                                        <p style="font-weight: 700;">12/15</p>
+                                    </div>
+                                    <div
+                                        style="padding: 1rem; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0; text-align: center;">
+                                        <h5 style="color: #64748b;">Quizzes</h5>
+                                        <p style="font-weight: 700;">4/5</p>
+                                    </div>
+                                    <div
+                                        style="padding: 1rem; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0; text-align: center;">
+                                        <h5 style="color: #64748b;">Projects</h5>
+                                        <p style="font-weight: 700;">2/3</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- UI/UX -->
+                            <div class="course-item"
+                                style="flex-direction: column; align-items: flex-start; gap: 1rem;">
+                                <div
+                                    style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
+                                    <div class="course-meta">
+                                        <h4>UI/UX Digital Design</h4>
+                                        <span>6 Modules Completed out of 10</span>
+                                    </div>
+                                    <span style="font-weight: 800; color: #0A3D62;">65%</span>
+                                </div>
+                                <div class="progress-bar-container" style="width: 100%;">
+                                    <div class="progress-fill" style="width: 65%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
