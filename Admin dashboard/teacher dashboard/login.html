@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Login - GTTI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-body">
+    <div class="login-container">
+        <div class="login-left">
+            <div class="brand-box">
+                <i class="fa-solid fa-graduation-cap logo-icon-lg"></i>
+                <h1>GTTI Portal</h1>
+                <p>Government Technical Training Institute</p>
+            </div>
+        </div>
+        <div class="login-right">
+            <div class="login-form-wrapper">
+                <h2>Instructor Login</h2>
+                <p class="welcome-text">Welcome back! Please access your dashboard.</p>
+
+                <form id="login-form">
+                    <div class="form-group">
+                        <label>Staff ID / Email</label>
+                        <div class="input-with-icon">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" placeholder="e.g. staff@gtti.edu.pk" value="demo@gtti.edu.pk" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <div class="input-with-icon">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" placeholder="••••••••" value="password" required>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <label class="remember-me">
+                            <input type="checkbox" checked> Remember me
+                        </label>
+                        <a href="#" class="forgot-pass">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="btn-primary btn-block">Login to Dashboard</button>
+                </form>
+
+                <p class="footer-text">Protected by GTTI IT Department &copy; 2026</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerText;
+
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Authenticating...';
+            btn.style.opacity = '0.7';
+
+            // Simulate API call
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 1000);
+        });
+    </script>
+</body>
+
+</html>
