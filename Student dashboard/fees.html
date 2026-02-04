@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fee Status | Govt GTTI Official</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-university"></i>
+                    <span>GTTI RYK</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="index.html"><i class="fas fa-home"></i> <span>Dashboard</span></a>
+                    </li>
+                    <li>
+                        <a href="progress.html"><i class="fas fa-book-reader"></i> <span>My Progress</span></a>
+                    </li>
+                    <li>
+                        <a href="attendance.html"><i class="fas fa-calendar-alt"></i> <span>Attendance</span></a>
+                    </li>
+                    <li class="active">
+                        <a href="fees.html"><i class="fas fa-wallet"></i> <span>Fee Status</span></a>
+                    </li>
+                    <li>
+                        <a href="results.html"><i class="fas fa-graduation-cap"></i> <span>Exam Results</span></a>
+                    </li>
+                    <li>
+                        <a href="notices.html"><i class="fas fa-bell"></i> <span>Notices</span></a>
+                    </li>
+                </ul>
+
+                <ul class="sidebar-bottom" style="margin-top: auto;">
+                    <li>
+                        <a href="profile.html"><i class="fas fa-user-cog"></i> <span>Profile Settings</span></a>
+                    </li>
+                    <li>
+                        <a href="login.html" style="color: #ef4444;"><i class="fas fa-sign-out-alt"></i> <span>Sign
+                                Out</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Workspace -->
+        <main class="main-content">
+            <header class="top-header">
+                <div class="header-left">
+                    <div style="display: flex; align-items: center; gap: 20px;">
+                        <button class="toggle-btn" id="toggle-sidebar">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <div>
+                            <h1>Fee Status</h1>
+                            <p>Manage your tuition fees and payment history.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="header-actions">
+                        <div class="user-profile">
+                            <img src="https://ui-avatars.com/api/?name=Ayesha+Khan&background=0A3D62&color=fff"
+                                alt="User">
+                            <span style="font-weight: 700; color: white;">Ayesha</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="fade-in">
+                <div class="grid-card">
+                    <div class="card-header">
+                        <h2>Current Session: Spring 2025</h2>
+                        <div
+                            style="background: #ecfdf5; color: #10b981; padding: 8px 15px; border-radius: 50px; font-weight: 800; font-size: 0.9rem;">
+                            <i class="fas fa-check-circle"></i> ALL FEES PAID
+                        </div>
+                    </div>
+
+                    <div class="fee-history" style="margin-top: 2rem;">
+                        <table style="width: 100%; border-collapse: collapse; text-align: left;">
+                            <thead>
+                                <tr style="border-bottom: 2px solid #f1f5f9;">
+                                    <th style="padding: 15px; color: #64748b;">Challan #</th>
+                                    <th style="padding: 15px; color: #64748b;">Description</th>
+                                    <th style="padding: 15px; color: #64748b;">Amount</th>
+                                    <th style="padding: 15px; color: #64748b;">Due Date</th>
+                                    <th style="padding: 15px; color: #64748b;">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="border-bottom: 1px solid #f1f5f9;">
+                                    <td style="padding: 15px; font-weight: 600;">GTTI-8821</td>
+                                    <td style="padding: 15px;">Monthly Tuition - Dec</td>
+                                    <td style="padding: 15px; font-weight: 700;">Rs. 2,500</td>
+                                    <td style="padding: 15px;">Dec 10, 2025</td>
+                                    <td style="padding: 15px;"><span
+                                            style="color: #10b981; font-weight: 800;">PAID</span></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #f1f5f9;">
+                                    <td style="padding: 15px; font-weight: 600;">GTTI-8740</td>
+                                    <td style="padding: 15px;">Lab Workshop Fee</td>
+                                    <td style="padding: 15px; font-weight: 700;">Rs. 1,000</td>
+                                    <td style="padding: 15px;">Nov 20, 2025</td>
+                                    <td style="padding: 15px;"><span
+                                            style="color: #10b981; font-weight: 800;">PAID</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div style="margin-top: 3rem; text-align: right;">
+                        <button id="download-vouchers" class="btn"
+                            style="background: var(--primary-gradient); color: white; border: none; padding: 15px 30px; border-radius: 50px; font-weight: 800; cursor: pointer; transition: var(--transition); box-shadow: 0 10px 20px rgba(10, 61, 98, 0.2);">
+                            <i class="fas fa-file-download"></i> Download All Vouchers
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
